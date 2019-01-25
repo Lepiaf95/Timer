@@ -7,11 +7,9 @@ using namespace std;
 int main()
 {
     cout << "Hello World!\n"; 
-	thread time1(&Time::increaseTime, Time(10)); // compte jusqu'a 10
-	thread time2(&Time::increaseTime, Time(5)); // compte jusqu'a 10 a partir de time1 = 5
-	cout << "briovnreibvervep" << endl;
+	thread time1(&Time::increaseTime, Time(30)); // compte jusqu'a 60
+	thread time2(&Time::increaseTime, Time(30)); // compte jusqu'a 10 a partir de time1 = 30
 	time1.join();
-	cout << "ieruhpeiurhferi" << endl;
 	time2.join();
 	cout << "Bye Bye World!\n";
 	system("pause");
